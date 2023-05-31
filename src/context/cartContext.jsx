@@ -5,11 +5,14 @@ const CartContext = createContext();
 
 const getLocalCartData = () => {
     let localCartData = localStorage.getItem("storeCart");
-    if(localCartData === []){
-        return [];
-    }else{
-        return JSON.parse(localCartData);
-    }
+    // if(localCartData === []){
+    //     return [];
+    // }else{
+    //     return JSON.parse(localCartData);
+    // }
+    const parsedData = JSON.parse(localCartData);
+    if(!Array.isArray(parsedData)) return [];
+    return parsedData;
 }
 
 const initialState = {
@@ -49,9 +52,9 @@ const CartProvider = ({ children }) => {
     
     // to add the data in localStorage
     useEffect(()=>{
-        dispatch({type:"CART_TOTAL_ITEM"})
-        dispatch({type:"CART_TOTAL_PRICE"})
-        // dispatch({type: "CART_ITEM_PRICE_TOTAL"});
+        // dispatch({type:"CART_TOTAL_ITEM"})
+        // dispatch({type:"CART_TOTAL_PRICE"})
+        dispatch({type: "CART_ITEM_PRICE_TOTAL"});
 
         localStorage.setItem("storeCart", JSON.stringify(state.cart))
     },[state.cart])
