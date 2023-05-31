@@ -11,7 +11,7 @@ const HeroSection = (props) => {
                         <p className="intro-data">Welcome to</p>
                         <h1>{props.name}</h1>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum quae necessitatibus possimus dignissimos rem, vel, excepturi aliquid vitae asperiores sint odit nulla aperiam illum aut!</p>
-                        <NavLink>
+                        <NavLink to="/products">
                             <button className="btn btn-primary">Shop Now</button>
                         </NavLink>
                     </div>
