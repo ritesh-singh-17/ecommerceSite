@@ -9,7 +9,7 @@ const Error = () => {
         <p>
           The page you are looking for does not exist. You can click the button below to go back to the homepage
         </p>
-        <NavLink to="/">
+        <NavLink to="/ecommercesite">
           <button className="btn btn-primary">
             Home
           </button>
