@@ -7,8 +7,6 @@ import Contact from "./Contact";
 import SingleProduct from "./SingleProduct";
 import Cart from "./Cart";
 import Error from "./Error";
-import { GlobalStyle } from './GlobalStyle';
-import { ThemeProvider } from 'styled-components';
 import Header from './Header';
 import Footer from './Footer';
 
@@ -38,11 +36,11 @@ const App = () => {
         <Header />
         <Routes>
           <Route path='/ecommercesite' element={<Home />}></Route>
-          <Route path='/about' element={<About />}></Route>
-          <Route path='/products' element={<Products />}></Route>
-          <Route path='/contact' element={<Contact />}></Route>
-          <Route path='/singleproduct/:id' element={<SingleProduct />}></Route>
-          <Route path='/cart' element={<Cart />}></Route>
+          <Route path='/ecommercesite/about' element={<About />}></Route>
+          <Route path='/ecommercesite/products' element={<Products />}></Route>
+          <Route path='/ecommercesite/contact' element={<Contact />}></Route>
+          <Route path='/ecommercesite/singleproduct/:id' element={<SingleProduct />}></Route>
+          <Route path='/ecommercesite/cart' element={<Cart />}></Route>
           <Route path='*' element={<Error />}></Route>
         </Routes>
         <Footer/>

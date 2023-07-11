@@ -55,6 +55,7 @@ const cartReducer = (state, action) => {
             cart: [],
         }
     }
+    
     if (action.type === "SET_DECREMENT") {
         let updatedData = state.cart.map((currElem) => {
             if (currElem.id === action.payload) {
@@ -76,26 +77,26 @@ const cartReducer = (state, action) => {
         }
     }
     
-    // if (action.type === "SET_INCREMENT") {
-    //     let updatedData = state.cart.map((currElem) => {
-    //         if (currElem.id === action.payload) {
-    //             let incAmount = currElem.amount + 1;
-    //             if (incAmount > currElem.max) {
-    //                 incAmount = currElem.max;
-    //             }
-    //             return {
-    //                 ...currElem,
-    //                 amount: incAmount,
-    //             }
-    //         } else {
-    //             return currElem
-    //         }
-    //     })
-    //     return {
-    //         ...state,
-    //         cart: updatedData,
-    //     }
-    // }
+    if (action.type === "SET_INCREMENT") {
+        let updatedData = state.cart.map((currElem) => {
+            if (currElem.id === action.payload) {
+                let incAmount = currElem.amount + 1;
+                if (incAmount > currElem.max) {
+                    incAmount = currElem.max;
+                }
+                return {
+                    ...currElem,
+                    amount: incAmount,
+                }
+            } else {
+                return currElem
+            }
+        })
+        return {
+            ...state,
+            cart: updatedData,
+        }
+    }
     // if (action.type === "CART_TOTAL_ITEM") {
     //     let updatedItemVal = state.cart.reduce((initialValue, currValue) => {
     //         let { amount } = currValue;

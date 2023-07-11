@@ -14,7 +14,7 @@ const Header = () => {
     <>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
-          <NavLink className="navbar-brand" to="/">
+          <NavLink className="navbar-brand" to="/ecommercesite">
             <h1>Ritesh's Store</h1>
           </NavLink>
           <button className="navbar-toggler" onClick={() => { setBtnState(!btnstate) }} type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,13 +29,13 @@ const Header = () => {
                 <NavLink className="nav-link" to="/ecommercesite">Home</NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/about">About</NavLink>
+                <NavLink className="nav-link" to="/ecommercesite/about">About</NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/products">Products</NavLink>
+                <NavLink className="nav-link" to="/ecommercesite/products">Products</NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/contact">Contacts</NavLink>
+                <NavLink className="nav-link" to="/ecommercesite/contact">Contacts</NavLink>
               </li>
               <li className="nav-item">
                 {isAuthenticated && <h6 className='m-0'>{user.name}</h6>}
@@ -53,7 +53,7 @@ const Header = () => {
                 </li>
               }
               <li className="nav-item">
-                <NavLink className="nav-link cartIcon" to="/cart">
+                <NavLink className="nav-link cartIcon" to="/ecommercesite/cart">
                   <FiShoppingCart className="cartTrolley" />
                   <div className="cartTotalItems">
                     <span>{total_item}</span>

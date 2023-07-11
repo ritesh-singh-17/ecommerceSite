@@ -6,7 +6,7 @@ const Product = (props) => {
     const { id, name, image, price, category } = props;
     return (
         <>
-            <NavLink className="featureProductItems col-lg-4 col-md-4 col-sm-12 col-12" to={`/singleproduct/${id}`}>
+            <NavLink className="featureProductItems col-lg-4 col-md-4 col-sm-12 col-12" to={`/ecommercesite/singleproduct/${id}`}>
                 <div className="card">
                     <img className='img-fluid card-image ' src={image} alt={name} />
                     <div class="card-img-overlay">

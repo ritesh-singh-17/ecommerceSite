@@ -12,7 +12,7 @@ const Footer = () => {
                             <h5>Talk to us today</h5>
                         </div>
                         <div>
-                            <NavLink to="/contact">
+                            <NavLink to="/ecommercesite/contact">
                                 <button className='btn btn-primary'>Get Started</button>
                             </NavLink>
                         </div>

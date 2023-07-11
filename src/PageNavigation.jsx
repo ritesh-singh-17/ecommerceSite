@@ -5,7 +5,7 @@ const PageNavigation = (props) => {
   return (
     <>
         <div className="pageNavigationBar">
-            <NavLink className=" text-decoration-none" to="/">Home</NavLink>/{props.title}
+            <NavLink className=" text-decoration-none" to="/ecommercesite">Home</NavLink>/{props.title}
         </div>
     </>
   )

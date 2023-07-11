@@ -21,7 +21,7 @@ const ListView = ({ products }) => {
                                             <FormatPrice price={price} />
                                         </p>
                                         <p>{description.slice(0, 90)}.....</p>
-                                        <NavLink to={`/singleproduct/${id}`}>
+                                        <NavLink to={`/ecommercesite/singleproduct/${id}`}>
                                             <button className="btn btn-primary mb-2">Read More</button>
                                         </NavLink>
                                     </div>
